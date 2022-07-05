@@ -1,0 +1,329 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family:'Horta';
+
+}
+@font-face {
+    font-family: 'Horta';
+    src: url('/fonts/horta/Horta\ demo.otf');
+}
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&display=swap');
+
+html,body{
+    width: 100%;
+    height: 100%;
+    /*background-color: #050919;*/
+    background-color: black;
+}
+.center{
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+li{
+    list-style: none;
+}
+a{text-decoration: none;}
+
+/*------------------- main/banner---------------*/
+main{
+    position: relative;
+}
+
+.header-top-desktop{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-top-desktop ul{
+    display: flex;
+    align-items: center;
+}
+.header-top-desktop ul li{
+    margin: 0px 8px;
+}
+.header-top-desktop i{
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+    transition: .3s;
+}
+.header-top-desktop i:hover, .header-top-desktop p:hover{
+    color: rgb(4, 255, 4);
+}
+.trans-sub{
+    font-size: 20px;
+}
+.top-logo img{
+    width: 60px;
+}
+
+
+.nav-desktop > .center{
+    display: flex;
+    justify-content: space-between;
+}
+.nav-desktop ul{
+    display: flex;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding: 15px 0px;
+}
+.nav-desktop ul li a{
+    display: block;
+    padding: 5px 10px;
+    margin: 0 5px;
+    transition: .3s;
+}
+.nav-desktop ul li a:hover{
+    color: rgb(4, 255, 4);
+}
+
+
+.nav-mobile{
+    position: relative;
+    display: none;
+}
+.nav-mobile i{
+    margin: 10px 18px; 
+    position: absolute; 
+    right: 0px;
+    font-size:35px;
+    z-index: 1;
+}
+.ul-mobile{
+    display: none;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+}
+.ul-mobile li a{
+    display: block;
+    padding: 15px 0;
+    border: 1px solid rgb(4, 255, 4);
+    background-color: black;
+}
+
+.banner{
+    overflow: hidden;
+    margin: 30px auto 0;
+    position: relative;
+}
+.venus-bg{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    z-index: 1;
+}
+.venus-bg video{
+    width: 150vw;
+    max-width: 1700px;
+    transform: rotate(-90deg);
+}
+
+.banner-txt{
+    width: 100%;
+    color: white;
+    position: absolute;
+    top: 140px;
+    text-align: center;
+}
+.banner-txt h2{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 110px;
+    color: #051B6F;
+}
+.banner-txt h1{font-size: 50px; text-shadow: 3px 3px 3px rgba(74, 159, 94, 1);}
+.banner-txt h1::after, .banner-txt h1::before{
+    content: " ";
+    width: 100px;
+    height: 4px;
+    display: block;
+    margin: 5px auto;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(7,7,102,1) 40%, rgba(4,255,4,1) 50%, rgba(7,7,102,1) 60%, rgba(2,0,36,1) 100%);
+}
+.banner-txt h3{font-size: 60px;}
+/*------------------- main/banner---------------*/
+
+/*------------------- Quem nos somosr---------------*/
+
+.container-quemSomos{
+    position: relative;
+    top:-120px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.quem-txt p{
+    font-size: 35px;
+}
+.quem-txt span{
+    color: #FF5B00;
+}
+#venus{
+    font-size: 150px;
+}
+
+.quem-txt, .container-citacao{
+    width: 30%;
+    background: black;
+}
+
+.quem-img{
+    width:40%;
+    background: black;
+}
+.quem-img img{
+    width: 100%;
+}
+.quem-txt, .quem-img{
+    z-index: 1;
+}
+.container-citacao > p{
+    text-align:center;
+    padding: 0 0 20px ;
+    font-size: 30px;
+}
+.citacao{
+    width: 100%;
+    padding: 0 0 30px 0;
+}
+.citacao-single{
+    font-size: 25px;
+    text-align: center;
+    display: inline-block;
+}
+.citacao-single > p{
+    margin-bottom: 10px;
+}
+
+/**Estilo para o plugin slick**/
+	
+.slick-dotted ul{
+    list-style-type: none;
+    text-align: center;
+    position: relative;
+}
+
+.slick-dotted li{
+    display: inline-block;
+    margin:0 5px;
+}
+
+.slick-dotted button:focus{
+    outline: 0;
+}
+
+.slick-dotted li button{
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border-width: 0;
+    background: #ffffff;
+    opacity: 1;
+    cursor: pointer;
+}
+
+li.slick-active button{
+    background: rgb(4, 255, 4);
+}
+
+.slick-slide:focus{outline: none;}
+
+
+/**Fim do estilo para o plugin**/
+/*------------------- Quem nos somosr---------------*/
+
+
+/*-------------------------------------------------------*/
+@media  screen and (max-width:1000px){
+    .banner-txt h2{font-size: 100px}
+    .container-quemSomos{
+        padding: 0 2%;
+    }
+    .quem-txt, .quem-img{
+        width:50%;
+        background: none;
+    }
+    .container-citacao{
+        width:100%;
+        margin-top: 50px;
+    }
+    .citacao-single{
+        margin: 0 20px;
+    }
+}
+@media screen and (max-width:800px){
+    .top-logo{
+        display: none;
+    }
+    .header-top-desktop{
+        padding: 0 10px;
+    }
+    .nav-desktop{
+        display: none;
+    }
+    .nav-mobile{
+        display: block;
+    }
+    .banner{margin-top:135px; position: static;}
+    .banner-txt{top:120px}
+    .banner-txt h2{font-size: 90px}
+    .banner-txt h1{font-size: 45px; margin-top: 120px;}
+    .banner-txt h3{font-size: 55px;}
+}
+@media  screen and (max-width:700px) {
+    .banner-txt h2{font-size: 85px}
+    .banner-txt h1{font-size: 40px;}
+    .banner-txt h3{font-size: 50px;}
+    .banner{margin-top:135px}
+    .venus-bg video{width:160vw}
+    .quem-txt, .quem-img{
+        width:100%;
+    }
+}
+@media screen and (max-width:600px) {
+    .banner-txt h2{font-size: 75px}
+    .banner-txt h1{font-size: 40px;}
+    .banner-txt h3{font-size: 45px;}
+    .banner{margin-top:155px}
+    .venus-bg video{width:170vw}
+    .container-quemSomos{top:-100px;}
+}
+@media screen and (max-width:500px) {
+    .banner-txt h2{font-size: 65px}
+    .banner-txt h1{font-size: 35px;}
+    .banner-txt h3{font-size: 40px;}
+    .banner{margin-top:165px}
+    .venus-bg video{width:180vw}
+    .banner-txt{top:140px}
+    .container-quemSomos{top:-80px;}
+    #venus{font-size: 130px;}
+}
+@media  screen and (max-width: 400px){
+    .trans-sub:nth-child(2), .nav-social-media li:nth-child(2){
+        display: none;
+    }
+    .banner{margin-top:175px}
+    .banner-txt h2{font-size: 55px} 
+    .container-quemSomos{top:-60px;}
+}
+@media screen and (max-width:320px){
+    .banner-txt{top:120px}
+    .banner-txt h1{margin-top: 80px;}
+    .banner{margin-top: 210px;}
+    .venus-bg video{width:190vw}
+}
+@media screen and (max-width:300px){
+    .venus-bg video{width:210vw}
+    #venus{font-size: 110px;}
+}   
