@@ -34,6 +34,7 @@ main{
 }
 
 .header-top-desktop{
+    position: relative;
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -53,10 +54,15 @@ main{
     transition: .3s;
 }
 .header-top-desktop i:hover, .header-top-desktop p:hover{
-    color: rgb(4, 255, 4);
+    color: #0b32cd;
 }
 .trans-sub{
     font-size: 20px;
+}
+.top-logo{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .top-logo img{
     width: 60px;
@@ -80,7 +86,7 @@ main{
     transition: .3s;
 }
 .nav-desktop ul li a:hover{
-    color: rgb(4, 255, 4);
+    color: #0b32cd;
 }
 
 
@@ -156,7 +162,7 @@ main{
 
 .container-quemSomos{
     position: relative;
-    top:-120px;
+    top:-90px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -243,7 +249,213 @@ li.slick-active button{
 /**Fim do estilo para o plugin**/
 /*------------------- Quem nos somosr---------------*/
 
+/*------------------- O que fazemos---------------*/
 
+.container-fazemos{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px auto 100px;
+    padding: 0 2%;
+}
+.fazemos{
+    /*border: 1px solid #ff5b00;*/
+}
+.oque-fazemos{
+    width: 45%;
+}
+.oque-fazemos h2{
+    font-size: 50px;
+}
+.oque-fazemos span{
+    color: #FF5B00;
+}
+.container-skills{
+    width: 70%;
+    font-size: 25px;
+}
+.skills{
+    display: flex;
+    cursor: pointer;
+}
+.skills li{
+    transition: .5s;
+}
+.skills li:first-of-type{
+    padding: 15px 10px;
+    margin: 10px 5px 0 0 ;
+    border: 1px solid #ff5b00;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+.skills li:nth-of-type(2){
+    width: 100%;
+    padding: 15px 0px;
+    text-align: center;
+    border: 1px solid #ff5b00;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+.fazemos-img{
+    width: 55%;
+    position: relative;
+}
+.fazemos-img img{
+    display: block;
+    width: 95%;
+    height: 450px;
+    border-radius: 100px;
+    margin: 0 auto;
+}
+.do{
+    display: none
+}
+.js-slidein {
+    opacity: 0;
+    transform: translateY(20px);
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+  }
+  
+  .js-slidein-visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+/*------------------- O que fazemos---------------*/
+
+/*---------------container-time----------------*/
+.container-team h2{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 60px;
+    color: #FF5B00;
+}
+.container-team > div{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.our-team{ 
+    width: 300px;
+    margin: 0 20px;
+}
+.our-team .team{
+    position: relative;
+    padding: 10px 0 10px 20px;
+}
+.our-team .team:before{
+    content: "";
+    width: 40px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #FF5B00;
+}
+.our-team .pic{
+    position: relative;
+    overflow: hidden;
+}
+.our-team .pic:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+}
+.our-team:hover .pic:after{
+    opacity: 1;
+}
+.our-team .pic img{
+    max-width: 100%;
+    height: auto;
+}
+.our-team .social-links{
+    width: 100%;
+    position: absolute;
+    bottom: -40%;
+    left: 0;
+    text-align: center;
+    z-index: 1;
+    transition: all 0.5s ease 0s;
+}
+.our-team:hover .social-links{
+    bottom: 20px;
+}
+.our-team .social-links li{
+    display: inline-block;
+    margin-right: 1px;
+}
+.our-team .social-links li a{
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    border: 1px solid #fdfffc;
+    font-size: 18px;
+    color: #fdfffc;
+    transition: all 0.5s ease 0s;
+}
+.our-team .social-links li a:hover{
+    background: #2ec4b6;
+    border: 1px solid #2ec4b6;
+}
+.our-team .team-info{
+    padding: 20px;
+    background: #051B6F;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.5s ease 0s;
+}
+.our-team .team-info:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background: #FF5B00;
+    z-index: -1;
+    transition: all 0.5s ease 0s;
+}
+.our-team:hover .team-info:before{
+    left: 0;
+}
+.our-team .title{
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    transition: all 0.5s ease 0s;
+}
+.our-team:hover .title{
+    color: rgb(4, 255, 4);
+    color: #0b32cd;
+    color: black;
+}
+.our-team .post{
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    color: #FF5B00;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+.our-team:hover .team-info,
+.our-team:hover .post{
+    color: #fdfffc;
+}
+.our-team .description{
+    font-size: 18px;
+    line-height: 22px;
+}
 /*-------------------------------------------------------*/
 @media  screen and (max-width:1000px){
     .banner-txt h2{font-size: 100px}
@@ -261,6 +473,9 @@ li.slick-active button{
     .citacao-single{
         margin: 0 20px;
     }
+}
+@media screen and (max-width: 990px){
+    .our-team{ margin-bottom: 20px; }
 }
 @media screen and (max-width:800px){
     .top-logo{
@@ -280,6 +495,23 @@ li.slick-active button{
     .banner-txt h2{font-size: 90px}
     .banner-txt h1{font-size: 45px; margin-top: 120px;}
     .banner-txt h3{font-size: 55px;}
+    .oque-fazemos{
+        width: 100%;
+    }
+    .fazemos{
+        width: 100%;
+        text-align: center;
+    }
+    .fazemos-img div{
+        margin: 0 auto;
+    }
+    .container-skills{
+        width: 80%;
+        margin: 10px auto 50px;
+    }
+    .skills li{
+        margin: 0 auto ;
+    }
 }
 @media  screen and (max-width:700px) {
     .banner-txt h2{font-size: 85px}
@@ -290,6 +522,12 @@ li.slick-active button{
     .quem-txt, .quem-img{
         width:100%;
     }
+    .our-team{
+    }
+    
+}
+@media screen and (max-width:650){
+    
 }
 @media screen and (max-width:600px) {
     .banner-txt h2{font-size: 75px}
@@ -308,6 +546,9 @@ li.slick-active button{
     .banner-txt{top:140px}
     .container-quemSomos{top:-80px;}
     #venus{font-size: 130px;}
+    .fazemos-img div img{
+        height: auto
+    }
 }
 @media  screen and (max-width: 400px){
     .trans-sub:nth-child(2), .nav-social-media li:nth-child(2){
